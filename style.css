@@ -1,0 +1,228 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+/* Mengganti warna tautan navigasi menjadi abu-abu */
+nav a {
+    text-decoration: none;
+    color: #888; /* Ganti dengan warna abu-abu yang Anda inginkan */
+    font-weight: bold;
+    transition: color 0.3s; /* Transisi warna untuk tautan */
+}
+
+/* Tautan yang aktif (sedang diklik) akan berubah warna */
+nav a:active {
+    color: #c09918; /* Warna baru saat tautan diklik */
+}
+
+/* Main Content Styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.tentang-kami, .aktivitas, .galeri, .kontak {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Gallery Styles */
+.gambar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.gambar img {
+    max-width: 30%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav li {
+        margin-right: 10px;
+    }
+
+    .gambar img {
+        max-width: 100%;
+    }
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #333;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Image Styles Inside Table */
+table img {
+    max-width: 100px;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Pagination Styles */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.pagination a {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    border-radius: 5px;
+}
+
+.pagination a:hover {
+    background-color: #c09918;
+}
+
+/* Gaya untuk Data Siswa */
+.data-siswa {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.data-siswa h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.data-siswa p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+/* Navigation Style untuk Kembali ke Beranda */
+nav a.back-to-home {
+    font-size: 15px;
+    margin-bottom: 5px;
+    text-decoration: none;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+nav a.back-to-home:hover {
+    background-color: #c09918;
+}
+
+/* Mengganti warna latar belakang pada bagian "Tentang Kami," "Galeri," dan "Kontak" */
+.tentang-kami, .galeri, .kontak {
+    background-color: #cccccc; /* Ganti dengan warna abu-abu yang Anda inginkan */
+}
+
+/* Tambahan CSS untuk halaman Daftarkan Diri */
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button#cancel-button {
+    margin-left: 10px;
+    background-color: #888;
+}
+
+button:hover {
+    background-color: #c09918;
+}
