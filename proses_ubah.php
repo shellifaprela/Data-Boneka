@@ -5,8 +5,8 @@ require_once 'koneksi.php';
 // Mengambil data dari form
 $id = $_POST['Nomor'];
 $Nama = $_POST['Nama'];
-$kelas = $_POST['Jumlah'];
-$no_presensi = $_POST['Harga'];
+$Jumlah = $_POST['Jumlah'];
+$Harga = $_POST['Harga'];
 
 // Mengecek apakah ada file Foto yang diupload
 if (isset($_FILES['Foto']['name']) && $_FILES['Foto']['name'] != '') {
@@ -30,17 +30,17 @@ if (isset($_FILES['Foto']['name']) && $_FILES['Foto']['name'] != '') {
     // Menyimpan Nama file ke database
     $query = "UPDATE data_boneka SET Nama=?, Jumlah=?, Harga=?, Foto=? WHERE Nomor=?";
     $stmt = $koneksi->prepare($query);
-    $stmt->bind_param("ssssi", $Nama, $Jumlah, $Harga, $filename, $Nomor);
+    $stmt->bind_param("ssssi", $Nama, $Jumlah, $Harga, $filename, $id);
 } else {
-    // Jika tidak ada file Foto yang diupload, hanya update data siswa tanpa mengubah Foto
+    // Jika tidak ada file Foto yang diupload, hanya update data boneka tanpa mengubah Foto
     $query = "UPDATE data_boneka SET Nama=?, Jumlah=?, Harga=? WHERE Nomor=?";
     $stmt = $koneksi->prepare($query);
-    $stmt->bind_param("sssi", $Nama, $Jumlah, $Harga, $Nomor);
+    $stmt->bind_param("sssi", $Nama, $Jumlah, $Harga, $id);
 }
 
-// Menjalankan query untuk mengupdate data siswa
+// Menjalankan query untuk mengupdate data boneka
 if ($stmt->execute()) {
-    header('Location: BERANDA.html');
+    header('Location: index.html');
 } else {
     echo "Error: " . $stmt->error;
 }
